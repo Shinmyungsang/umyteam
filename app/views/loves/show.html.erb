@@ -1,13 +1,13 @@
 <p>
-    <h3>Title : <%= @post.title %></h3>
+    <h3>Title : <%= @love.title %></h3>
 </p>
 <p>
-    <h3>Content : <%= @post.content %></h3>
+    <h3>Content : <%= @love.content %></h3>
 </p>
 <p>
-    <%=image_tag @post.image.url %>
+    <%=image_tag @love.image.url %>
 </p>
 
-<%= link_to 'Edit', edit_post_path %>
+<%= link_to 'Edit', edit_love_path %>
 <%= link_to 'Home', root_path %>
-<%= link_to 'Delete', post_path(@post), method: :delete, data:{confirm: "Are you sure?"} %>
+<%= link_to 'Delete', love_path(@love), method: :delete, data:{confirm: "Are you sure?"} %>
