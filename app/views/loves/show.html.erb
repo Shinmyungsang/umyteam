@@ -1,12 +1,40 @@
-<p>
-    <h3>Title : <%= @love.title %></h3>
-</p>
-<p>
-    <h3>Content : <%= @love.content %></h3>
-</p>
+   <!-- header -->
+  <header style="background-color:grey">
+    <div class="container">
+      <div style="height:150px" class="d-flex align-items-center">
+        <span style="color:white"><h2>입력한 값이 맞는지 확인해주세요!</h2>
+        </span>
+      </div>
+    </div>
+  </header>
+  <body>
 
+  <div class="container">
+      <div class="row justify-content-center">
+        <div class="p-5"><p><strong>"다시 한번 확인해주세요!"</strong></p></div>
+      </div>
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'Edit', edit_lofe_path %>
-<%= link_to 'Delete', lofe_path(@love), method: :delete, data:{confirm: "Are you sure?"} %>
-<%= link_to "Back", loves_path %>
+        <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row"><%= @love.title %></th>
+            <td>
+               <%= @love.content %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Home', root_path %></button>
+    <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_lofe_path %></button>
+    <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Delete', lofe_path(@love), method: :delete, data:{confirm: "Are you sure?"} %></button>
+    <button type="button" class="btn btn-secondary btn-lg"><%= link_to "Back", loves_path %></button>
+  </div>

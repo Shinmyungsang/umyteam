@@ -17,41 +17,30 @@
       <div class="row justify-content-center">
         <div class="p-5"><p><strong>"당신의 소모임을 남겨주세요"</strong></p></div>
       </div>
-      <% @loves.each do |love| %>
-	    <h2><%= link_to love.title, love %></h2>
-    <% end %>
+        <!-- 표 추가 -->
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Content</th></th> 
+          </tr>
+        </thead>
+          <% @loves.each do |love| %> 
+        <tbody>
+          <tr>
+            <th scope="row"><%= link_to love.id, love %></th>
+            <td><%= link_to love.title, love %></td>
+            <td><%= link_to love.content, love %></td>
+          </tr>    
+        </tbody>
+        <% end %>
+      </table>
+    </div>  
     <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "게시판에 글 남기기", new_lofe_path %></button>
-    
-  </div>
-  <div class="container">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>스포츠</th>
-          <th>관련 카페</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>테니스</td>
-          <td><a href="http://cafe437.daum.net/_c21_/home?grpid=1Lcqn">건국대학교 테니스 오버</a></td>
-          <td>누가 운영하는지는 모름</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>야구</td>
-          <td><a href="http://club.cyworld.com/excaliburs">건국대학교 야구소모임</a></td>
-          <td>이름은 엑스칼리버다</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>수영</td>
-          <td><a href="http://gumin.gwangjin.or.kr/">광진구 체육센터</a></td>
-          <td>건국대학교 수영부는 없는 것 같다</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    </div>
+  
+  
+  
+  

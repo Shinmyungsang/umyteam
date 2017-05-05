@@ -13,9 +13,11 @@
       <div class="row justify-content-center">
         <div class="p-5"><p><strong>"당신의 소모임을 남겨주세요"</strong></p></div>
       </div>
+      
+      <%= render 'form' %>
+    <button type="button" class="btn btn-secondary btn-lg"><%= link_to "Home", root_path %></button>
+    <button type="button" class="btn btn-secondary btn-lg"><%= link_to "Back", loves_path %></button>
   </div>
-        <%= render 'form' %>
-        <%= link_to "Home", root_path %>
-        <%= link_to "Back", loves_path %>
+        
       
     

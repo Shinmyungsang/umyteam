@@ -1,16 +1,56 @@
-<%= form_for @love, html: {multipart: true} do |f| %>
 
-    <div class="field">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-    </div>
-    
-    <div class="field">
-        <%= f.label :content %>
-        <%= f.text_field :content %>
-    </div>
-   
-    <div class="actions">
-        <%= f.submit %>
-    </div>
+<!-- 이렇게 하면 될 때도 있고 안될 때도 있다
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>비고</th></th> 
+          </tr>
+        </thead>
+          <%= form_for @love do |f| %>
+        <tbody> 
+          <tr>
+            <th scope="row">
+                <div class="field">
+                <%= f.label :title %>
+                <%= f.text_field :title %>
+                </div>
+            </th>
+            <td>
+                <div class="field">
+                <%= f.label :content %>
+                <%= f.text_field :content %>
+                </div>
+            </td>
+            <td>
+              <div class="actions">
+              <%= f.button :submit %>
+              <% end %>
+              </div>
+            </td>
+          </tr>  
+        </tbody>
+      </table>
+    </div>  
+-->
+
+<!--- 이렇게 하면 무조건 되는데, 위와 같이 하면 될 떄도 안 될때도 있다.-->
+
+<%= form_for @love do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
 <% end %>
+
+   
+ 
