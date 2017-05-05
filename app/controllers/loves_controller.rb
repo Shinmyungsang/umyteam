@@ -1,7 +1,7 @@
 class LovesController < ApplicationController
-    before_action :find_love, only: [:show, :edit, :update, :destroy]
+    before_action :find_loves, only: [:show, :edit, :update, :destroy]
 
-    def love
+    def index
         @loves = Love.all
     end
     
@@ -40,7 +40,7 @@ class LovesController < ApplicationController
     
     private
     
-    def find_love
+    def find_loves
         @love = Love.find(params[:id])
     end
     

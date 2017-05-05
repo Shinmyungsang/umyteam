@@ -4,10 +4,9 @@
 <p>
     <h3>Content : <%= @love.content %></h3>
 </p>
-<p>
-    <%=image_tag @love.image.url %>
-</p>
 
-<%= link_to 'Edit', edit_love_path %>
+
 <%= link_to 'Home', root_path %>
-<%= link_to 'Delete', love_path(@love), method: :delete, data:{confirm: "Are you sure?"} %>
+<%= link_to 'Edit', edit_lofe_path %>
+<%= link_to 'Delete', lofe_path(@love), method: :delete, data:{confirm: "Are you sure?"} %>
+<%= link_to "Back", loves_path %>

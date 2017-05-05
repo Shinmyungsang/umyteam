@@ -25,4 +25,9 @@
 따라서 controller를 2개, 즉 love controller를 만들어줌으로써, love로 바로 가서 crud가 적용되도록 만들기로 하였다.
 하지만 controller를 2개로 해준다는 생소한 개념으로 인해 resource도 헷갈리기 시작했다. resource는 자동으로 crud를 연결해주는 것이다.
 
-현경:
+love의 복수형은 lofe로 받아주는 것도 어려웠다. 현경이가 rake routes로 해결했다.
+
+현경:routes 설정하는 것이 어려웠다.
+index에서 food, love, leisure 를 연결해야 해서, get '/leisure', to: 'posts#leisure' 형식으로 연결해줬다.
+또한 love에서 게시판기능을 사용하려고 crud에서 이용한 restful한 routes를 설정해주었다.
+loves controller를 만들고, loves안에 crud에서 배운 index, new 등의 action을 추가해주었다.
