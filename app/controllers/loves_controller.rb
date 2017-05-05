@@ -1,18 +1,19 @@
 class LovesController < ApplicationController
-    before_action :find_post, only: [:show, :edit, :update, :destroy]
-    def index
-        @posts = Post.all
+    before_action :find_love, only: [:show, :edit, :update, :destroy]
+
+    def love
+        @loves = Love.all
     end
     
     def new
-        @post = Post.new
+        @love = Love.new
     end
     
     def create
-        @post = Post.new(posts_params)
+        @love = Love.new(loves_params)
         
-        if @post.save
-            redirect_to @post
+        if @love.save
+            redirect_to @love
         else
             render 'new'
         end
@@ -25,25 +26,25 @@ class LovesController < ApplicationController
     end
     
     def update
-        if @post.update(posts_params)
-            redirect_to @post
+        if @love.update(loves_params)
+            redirect_to @love
         else
             render 'edit'
         end
     end
     
     def destroy
-        @post.destroy
-        redirect_to posts_path
+        @love.destroy
+        redirect_to loves_path
     end
     
     private
     
-    def find_post
-        @post = Post.find(params[:id])
+    def find_love
+        @love = Love.find(params[:id])
     end
     
-    def posts_params
-        params.require(:post).permit(:title, :content, :image)
+    def loves_params
+        params.require(:love).permit(:title, :content, :image)
     end
 end

@@ -1,0 +1,6 @@
+<h1>연애가 하고싶은 잉여에게</h1>
+<% @loves.each do |love| %>
+    <%= link_to love.title, love %><br>
+<% end %>
+
+<%= link_to "new love", new_love_path%>

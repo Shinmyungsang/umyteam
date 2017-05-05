@@ -24,11 +24,11 @@
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="https://teamwork2-criticalhit.c9users.io">
-          <div class="imgclass">
-            <img src="<%= image_url("mainlogo.png") %>" style="width:100px ">
-          </div> 
-        </a>
+        
+        <div class="navbar-brand" id="imgclass">
+        <%= link_to image_tag("mainlogo.png", style: "width:100px"), root_path %>
+        
+        
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
@@ -55,8 +55,10 @@
         </div>
       </div>
     </nav>
+    
 
 <%= yield %>
+ <%= image_tag("http://fimg3.pann.com/new/download.jsp?FileID=33541179", :style => 'border-right: 1px solid #000;')%>
 
 </body>
 </html>

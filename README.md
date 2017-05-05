@@ -1,24 +1,25 @@
+## 초기 설계 
+-- 아이디어
+1. 명상형의 아이디어로 잉여들을 위한 사이트를 만들기로 했다.
+그들이 밖으로 나갈 수있게 도와주려고 한다.
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+2. 구현할 것들 ? 
 
+잉여들이 사용할 수 있는 사이트를 만드는 것으로 크게 html파일은 4개로 만들기로 하였다.
+### 대문, 여가, 음식, 연애를 만들기로 하였다.
 
-Welcome to your Rails project on Cloud9 IDE!
+3. 데이터베이스 구조
 
-To get started, just do the following:
-
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://teamwork2-criticalhit.c9users.io/).
-
-Happy coding!
-The Cloud9 IDE team
+4. 분업
 
 
-## Support & Documentation
+2. 각자 페이지 하나씩 맡아서 홈페이지를 만들기로 했다.
+3. 선홍 -> 여가 사이트, 현경 -> index 사이트(main), 명상-> 음식 사이트 / 나머지 하나 연애 사이트
+4. 마지막 연애 사이트는  crud를 이용하여 게시판을 만들고, 사람들끼리 만날 수 있도록 하기로 했다.
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+5. 다른 사이트들을 연결 한 뒤, 마지막으로 게시판을 만들려고 했으나 controller를 두 개 만들어야 한다고 했다. 
+왜냐하면 controller를 2개 만들어 주지 않으면, root로 지정한 posts/index의 love로 가기 때문에 crud가 되지 않기 때문이다.
+따라서 controller를 2개, 즉 love controller를 만들어줌으로써, love로 바로 가서 crud가 적용되도록 만들기로 하였다.
+
+6. 하지만 controller를 2개로 해준다는 생소한 개념으로 인해 resource도 헷갈리기 시작했다. resource는 자동으로 crud를 연결해주는 것이다.
+
