@@ -34,3 +34,6 @@ form 에서 어쩔 때는 되고 어쩔 때는 안되는 오류가 발생했다.
 index에서 food, love, leisure 를 연결해야 해서, get '/leisure', to: 'posts#leisure' 형식으로 연결해줬다.
 또한 love에서 게시판기능을 사용하려고 crud에서 이용한 restful한 routes를 설정해주었다.
 loves controller를 만들고, loves안에 crud에서 배운 index, new 등의 action을 추가해주었다.
+
+7. c9주소 
+8. https://ide.c9.io/criticalhit/teamwork2
