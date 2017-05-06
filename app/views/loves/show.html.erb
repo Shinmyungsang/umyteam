@@ -2,7 +2,7 @@
   <header style="background-color:grey">
     <div class="container">
       <div style="height:150px" class="d-flex align-items-center">
-        <span style="color:white"><h2>입력한 값이 맞는지 확인해주세요!</h2>
+        <span style="color:white"><h6>입력한 값이 맞는지 확인해주세요!</h6>
         </span>
       </div>
     </div>
@@ -11,7 +11,7 @@
 
   <div class="container">
       <div class="row justify-content-center">
-        <div class="p-5"><p><strong>"다시 한번 확인해주세요!"</strong></p></div>
+        <div class="p-5"><p>"다시 한번 확인해주세요!"</strong</p></div>
       </div>
 
         <div class="container">
@@ -36,36 +36,12 @@
           </tr>
         </tbody>
       </table>
+      <div>
+        <% if @love.image.present? %> 
+          <%= image_tag @love.image.url %>
+        <% end %>
+      </div>  
     </div>
-  </div>
-  <% if @love.image.present? %> 
-    <%= image_tag @love.image.url %>
-  <% end %>
-  
-  <%= form_tag lofe_comments_path(@love) do %> 
-    <div class="input-field"> 
-      <%= text_area_tag :content, nil, class: "materialize-textarea", placeholder: "댓글을 작성해주세요.", required: true %> 
-    </div> 
-    <div class="input-field"> 
-      <%= button_tag "댓글 쓰기", class: "btn" %> 
-    </div> 
-  <% end %>
-  
-  <% if @love.comments.present? %> 
-    <ul class="collection"> 
-      <% @love.comments.each do |comment| %> 
-        <li class="collection-item"> 
-          <span class="title"><%= comment.user.name %></span> 
-          <span class="right"><%= comment.created_at %></span> 
-          <p><%= comment.content %></p>
-          <div>
-          <%= link_to "삭제", lofe_comment_path(love, comment), method: "delete" %>
-          </div> 
-        </li> 
-      <% end %> 
-    </ul> 
-  <% end %>  
-
     <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Home', root_path %></button>
     <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Edit', edit_lofe_path %></button>
     <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Delete', lofe_path(@love), method: :delete, data:{confirm: "Are you sure?"} %></button>
