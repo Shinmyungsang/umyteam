@@ -42,3 +42,6 @@ loves controller를 만들고, loves안에 crud에서 배운 index, new 등의 a
 -love의 controller내용 적용
 
 이미지 삭제하는 기능도 만들고싶었는데 routes에러를 해결하지 못해 삭제했다
+
+https://ide.c9.io/hyunkyung12/w4_teamproject1
+
